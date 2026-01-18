@@ -20,7 +20,7 @@ const AttemptExam = () => {
     const fetchQuestions = async () => {
         try {
             const res = await axios.get(
-                `http://localhost:5000/api/questions/exam/${examId}`,
+                `${import.meta.env.VITE_API_URL}/questions/exam/${examId}`,
                 {
                     headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
                 }
@@ -39,7 +39,7 @@ const AttemptExam = () => {
             }));
 
             await axios.post(
-                "http://localhost:5000/api/submissions",
+                `${import.meta.env.VITE_API_URL}/submissions`,
                 {
                     examId,
                     answers,

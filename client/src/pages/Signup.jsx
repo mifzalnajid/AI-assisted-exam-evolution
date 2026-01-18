@@ -10,7 +10,7 @@ const Signup = () => {
 
     const onFinish = async (values) => {
         try {
-            await axios.post("http://localhost:5000/api/auth/register", values);
+            await axios.post(`${import.meta.env.VITE_API_URL}/auth/register`, values);
 
             message.success("Registration successful. Please login.");
             navigate("/");

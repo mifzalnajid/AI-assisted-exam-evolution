@@ -5,7 +5,7 @@ const CreateExam = () => {
     const onFinish = async (values) => {
         try {
             await axios.post(
-                "http://localhost:5000/api/exams",
+                `${import.meta.env.VITE_API_URL}/exams`,
                 values,
                 {
                     headers: {

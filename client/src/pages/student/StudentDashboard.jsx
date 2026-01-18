@@ -13,7 +13,7 @@ const StudentDashboard = () => {
 
     const fetchExams = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/api/exams", {
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/exams`, {
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
             });
             setExams(res.data);

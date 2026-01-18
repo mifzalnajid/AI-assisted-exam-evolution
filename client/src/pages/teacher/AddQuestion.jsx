@@ -10,7 +10,7 @@ const AddQuestion = () => {
     const onFinish = async (values) => {
         try {
             await axios.post(
-                "http://localhost:5000/api/questions",
+                `${import.meta.env.VITE_API_URL}/questions`,
                 {
                     ...values,
                     examId,

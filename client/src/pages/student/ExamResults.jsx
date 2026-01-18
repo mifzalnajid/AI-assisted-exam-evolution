@@ -16,7 +16,7 @@ const ExamResults = () => {
     const fetchResults = async () => {
         try {
             const res = await axios.get(
-                `http://localhost:5000/api/submissions/exam/${examId}`,
+                `${import.meta.env.VITE_API_URL}/submissions/exam/${examId}`,
                 {
                     headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
                 }
