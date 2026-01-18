@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/test", testRoutes);
 app.use("/api/exams", examRoutes);
-app.use("/api/questions", questionRoutes); s
+app.use("/api/questions", questionRoutes);
 app.use("/api/submissions", submissionRoutes);
 
 
